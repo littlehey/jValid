@@ -43,3 +43,6 @@ $('input').jValid({
 	emptyCheck: false
 });
 ```
+
+
+[在线演示](https://littlehey.github.io/jValid/)
