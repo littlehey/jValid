@@ -154,7 +154,7 @@
 		bindEvent(this, o);
 		addStyle(o);
 		addTips(this, o);
-	}
+	};
 	
 	$.jValid = {
 		option : dOption
