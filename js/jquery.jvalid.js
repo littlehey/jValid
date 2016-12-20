@@ -1,5 +1,4 @@
 ;(function($){
-	'use strict';
 	
 	var emptyFunc = function(){};
 	var eventArr = ['keyup', 'keydown', 'keypress', 'blur', 'focus'];
@@ -102,7 +101,8 @@
 		if(o.tips === '') {
 			return;
 		}
-		if(o.html && /^\<.*?\>.*\<\/.*?\>$/.test(o.tips)) {
+		var reg = new RegExp('^\<.*?\>.*\<\/.*?\>$');
+		if(o.html && reg.test(o.tips)) {
 			var e = $(o.tips).hide();
 			ele.after(e);
 		} else {
@@ -161,7 +161,7 @@
 	};
 	
 	$(function(){
-		$('[data-jvalid]').each(function(){$(this).jValid()});
+		$('[data-jvalid]').each(function(){$(this).jValid();});
 	});
 
 })(window.jQuery);
